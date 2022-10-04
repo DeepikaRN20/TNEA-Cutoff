@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cut Off Calculator</title>
+    <link rel="stylesheet" type="text/css" href="E:\demo\Mark.css">
+</head>
+
+<body>
+
+    <div class="mar">
+        <h1>CUT OFF CALCULATOR</h1>
+        <hr>
+        <hr>
+        <form>
+            <h3>MATHS</h3>
+            <input type="number" id="maths" min="0" max="100">
+            <h3>CHEMISTRY</h3>
+            <input type="number" id="chemist" min="0" max="100">
+            <h3>PHYSICS</h3>
+            <input type="number" id="physic" min="0" max="100">
+            <br><br><br>
+            <input id="but" type="button" value="CALCULATE" onclick="calculate();">
+            <br><br>
+            <h3>CUT OFF MARK:</h3>
+            <span id="result"></span>
+
+
+        </form>
+    </div>
+
+    <script>
+        function calculate() {
+            a = parseInt(document.getElementById('maths').value);
+
+            b = parseInt(document.getElementById('chemist').value);
+
+            c = parseInt(document.getElementById('physic').value);
+
+            var cut = a + (b + c) / 2;
+            document.getElementById('result').innerHTML = cut;
+
+        }
+    </script>
+</body>
+
+</html>
